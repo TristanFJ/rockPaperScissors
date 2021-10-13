@@ -1,3 +1,5 @@
+let wins = 0
+
 function play(champion) {
   let aiChampion = ""
   aiChampions = ['rock', 'paper', 'scissors']
@@ -44,6 +46,8 @@ function play(champion) {
     document.getElementById('result').classList.add('text-white')
     document.getElementById('result').classList.add('bg-success')
     document.getElementById('result').innerText = 'YOU WIN!'
+    wins += 1
+    document.getElementById('wins').innerText = 'Total wins: ' + wins
     return console.log("you win");
   } else if (champion === "rock" && aiChampion === "scissors") {
     document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
@@ -51,6 +55,8 @@ function play(champion) {
     document.getElementById('result').classList.add('text-white')
     document.getElementById('result').classList.add('bg-success')
     document.getElementById('result').innerText = 'YOU WIN!'
+    wins += 1
+    document.getElementById('wins').innerText = 'Total wins: ' + wins
     return console.log("you win");
   } else if (champion === "paper" && aiChampion === "rock") {
     document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
@@ -58,6 +64,8 @@ function play(champion) {
     document.getElementById('result').classList.add('text-white')
     document.getElementById('result').classList.add('bg-success')
     document.getElementById('result').innerText = 'YOU WIN!'
+    wins += 1
+    document.getElementById('wins').innerText = 'Total wins: ' + wins
     return console.log("you win");
   }
 
