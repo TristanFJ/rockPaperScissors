@@ -9,13 +9,25 @@ main {
 }
 
 a {
-  color: black;
+  color: rgb(34, 34, 34);
 }
 
+a:hover {
+  color: white;
+}
 
 button:active {
   color: black;
   animation: spin .25s;
+}
+
+.font {
+  font-family: 'Notable', sans-serif;
+}
+
+.no-interact {
+  user-select: none;
+  pointer-events: none;
 }
 
 .spin {

@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css'>
   <link rel="stylesheet" href="styles.css">
   <title>ROCK PAPER SCISSORS</title>
 </head>
@@ -18,7 +22,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col bg-info text-center p-5 border border-5 border-bottom shadow">
-          <h1>ROCK PAPER SCISSORS</h1>
+          <h1 class="font no-interact">ROCK. PAPER. SCISSORS.</h1>
         </div>
       </div>
   </header>
@@ -29,18 +33,19 @@
         <div class="col-md-2"></div>
 
         <div class="col-md-8">
-          <div class="card text-center mt-5">
+          <div class="card text-center mt-5 shadow">
 
             <div class="card-body">
-              <h5 class="card-title">CHOOSE YOUR WARRIOR</h5>
-              <h5 class="card-text my-5">Long ago an ancient battle took place...<br> Three champions went face to
+              <h3 class="card-title font no-interact">CHOOSE YOUR CHAMPION</h3>
+              <h5 class="card-text mt-4 no-interact">Long ago an ancient battle took place...<br> Three champions went
+                face to
                 face...<br>
-                Their names were uppercase:<h5>
-                  <button onclick="play('rock')" class="btn m-3 btn-primary">ROCK</button>
-                  <button onclick="play('paper')" class="btn m-3 btn-primary">PAPER</button>
-                  <button onclick="play('scissors')" class="btn m-3 btn-primary">SCISSORS</button>
-                  <h4 id="ai"></h4>
-                  <h4 id="result" class=""></h4>
+                Their names were uppercase:</h5>
+              <button onclick="play('rock')" class="btn m-3 btn-info font btn-lg">ROCK</button>
+              <button onclick="play('paper')" class="btn m-3 btn-info font btn-lg">PAPER</button>
+              <button onclick="play('scissors')" class="btn m-3 btn-info font btn-lg">SCISSORS</button>
+              <h4 id="ai" class="no-interact"></h4>
+              <h4 id="result" class="no-interact "></h4>
             </div>
           </div>
 
@@ -58,7 +63,7 @@
       <div class="row">
         <div class="col bg-info text-center p-5 border border-5 border-bottom shadow">
           <h5>
-            made by <a href="https://github.com/tristanfj">Tristan Johns</a>
+            made by <a title="link to GitHub" href="https://github.com/tristanfj">Tristan Johns</a>
           </h5>
         </div>
       </div>
