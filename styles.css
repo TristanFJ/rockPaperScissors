@@ -25,6 +25,10 @@ button:active {
   font-family: 'Notable', sans-serif;
 }
 
+.sub-font {
+  font-family: 'Noto Sans Mono', monospace;
+}
+
 .no-interact {
   user-select: none;
   pointer-events: none;
