@@ -34,7 +34,7 @@ button:active {
   pointer-events: none;
 }
 
-.spin {
+/* .spin {
   animation-name: spin;
   animation-duration: 100ms;
   animation-iteration-count: 1;
@@ -49,4 +49,4 @@ button:active {
   to {
     transform: rotate(360deg);
   }
-}
+} */
