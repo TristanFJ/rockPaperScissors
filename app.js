@@ -6,10 +6,10 @@ function play(champion) {
   let aiChampion = ""
 
   // not sure if this actually affected anything, but aiChampions was missing a declaration? 
-  let aiChampions = ['rock', 'paper', 'scissors']
   tries += 1
   document.getElementById('tries').innerText = 'Tries: ' + tries
 
+  let aiChampions = ['rock', 'paper', 'scissors']
   let randChamp = Math.floor(Math.random() * aiChampions.length)
   aiChampion = aiChampions[randChamp]
   console.log('aiChampion:', aiChampion);
