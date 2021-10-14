@@ -4,7 +4,9 @@ let tries = 0
 
 function play(champion) {
   let aiChampion = ""
-  aiChampions = ['rock', 'paper', 'scissors']
+
+  // not sure if this actually affected anything, but aiChampions was missing a declaration? 
+  let aiChampions = ['rock', 'paper', 'scissors']
   tries += 1
   document.getElementById('tries').innerText = 'Tries: ' + tries
 
