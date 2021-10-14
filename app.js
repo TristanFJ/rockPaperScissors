@@ -8,11 +8,7 @@ function play(champion) {
   tries += 1
   document.getElementById('tries').innerText = 'Tries: ' + tries
 
-  let randChamp = Math.floor(Math.random() * aiChampions.length)
-  aiChampion = aiChampions[randChamp]
-  console.log('aiChampion:', aiChampion);
-
-  if (champion == aiChampion) {
+  function interfaceYouDraw() {
     document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
     document.getElementById('result').classList.remove('bg-success')
     document.getElementById('result').classList.remove('bg-danger')
@@ -20,63 +16,57 @@ function play(champion) {
     document.getElementById('result').innerText = 'YOU DRAW!'
     return console.log("you draw");
 
+  }
+
+  function interfaceYouLose() {
+    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
+    document.getElementById('result').classList.remove('bg-success')
+    document.getElementById('result').classList.add('text-white')
+    document.getElementById('result').classList.add('bg-danger')
+    document.getElementById('result').innerText = 'YOU LOSE!'
+    losses += 1
+    document.getElementById('losses').innerText = 'Losses: ' + losses
+    return console.log("you lose");
+
+  }
+
+  function interfaceYouWin() {
+    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
+    document.getElementById('result').classList.remove('bg-danger')
+    document.getElementById('result').classList.add('text-white')
+    document.getElementById('result').classList.add('bg-success')
+    document.getElementById('result').innerText = 'YOU WIN!'
+    wins += 1
+    document.getElementById('wins').innerText = 'Wins: ' + wins
+    return console.log("you win");
+
+  }
+
+  let randChamp = Math.floor(Math.random() * aiChampions.length)
+  aiChampion = aiChampions[randChamp]
+  console.log('aiChampion:', aiChampion);
+
+  if (champion == aiChampion) {
+    interfaceYouDraw();
 
   } else if (champion === "rock" && aiChampion === "paper") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-success')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-danger')
-    document.getElementById('result').innerText = 'YOU LOSE!'
-    losses += 1
-    document.getElementById('losses').innerText = 'Losses: ' + losses
-    return console.log("you lose");
+    interfaceYouLose();
+
   } else if (champion === "paper" && aiChampion === "scissors") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-success')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-danger')
-    document.getElementById('result').innerText = 'YOU LOSE!'
-    losses += 1
-    document.getElementById('losses').innerText = 'Losses: ' + losses
-    return console.log("you lose");
+    interfaceYouLose();
+
   } else if (champion === "scissors" && aiChampion === "rock") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-success')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-danger')
-    document.getElementById('result').innerText = 'YOU LOSE!'
-    losses += 1
-    document.getElementById('losses').innerText = 'Losses: ' + losses
-    return console.log("you lose");
+    interfaceYouLose();
 
 
   } else if (champion === "scissors" && aiChampion === "paper") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-danger')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-success')
-    document.getElementById('result').innerText = 'YOU WIN!'
-    wins += 1
-    document.getElementById('wins').innerText = 'Wins: ' + wins
-    return console.log("you win");
+    interfaceYouWin();
+
   } else if (champion === "rock" && aiChampion === "scissors") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-danger')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-success')
-    document.getElementById('result').innerText = 'YOU WIN!'
-    wins += 1
-    document.getElementById('wins').innerText = 'Wins: ' + wins
-    return console.log("you win");
+    interfaceYouWin();
+
   } else if (champion === "paper" && aiChampion === "rock") {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-danger')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').classList.add('bg-success')
-    document.getElementById('result').innerText = 'YOU WIN!'
-    wins += 1
-    document.getElementById('wins').innerText = 'Wins: ' + wins
-    return console.log("you win");
+    interfaceYouWin();
   }
 
 }
