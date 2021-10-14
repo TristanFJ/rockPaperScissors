@@ -12,22 +12,25 @@ function play(champion) {
   aiChampion = aiChampions[randChamp]
   console.log('aiChampion:', aiChampion);
 
+  let result = document.getElementById('result')
+  let yourOpponent = document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
+
   function interfaceYouDraw() {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-success')
-    document.getElementById('result').classList.remove('bg-danger')
-    document.getElementById('result').classList.remove('text-white')
-    document.getElementById('result').innerText = 'YOU DRAW!'
+    yourOpponent
+    result.classList.remove('bg-success')
+    result.classList.remove('bg-danger')
+    result.classList.remove('text-white')
+    result.innerText = 'YOU DRAW!'
     return console.log("you draw");
 
   }
 
   function interfaceYouLose() {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-success')
-    document.getElementById('result').classList.add('bg-danger')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').innerText = 'YOU LOSE!'
+    yourOpponent
+    result.classList.remove('bg-success')
+    result.classList.add('bg-danger')
+    result.classList.add('text-white')
+    result.innerText = 'YOU LOSE!'
     losses += 1
     document.getElementById('losses').innerText = 'Losses: ' + losses
     return console.log("you lose");
@@ -35,11 +38,11 @@ function play(champion) {
   }
 
   function interfaceYouWin() {
-    document.getElementById('ai').innerText = 'Your opponent was ' + aiChampion + ","
-    document.getElementById('result').classList.remove('bg-danger')
-    document.getElementById('result').classList.add('bg-success')
-    document.getElementById('result').classList.add('text-white')
-    document.getElementById('result').innerText = 'YOU WIN!'
+    yourOpponent
+    result.classList.remove('bg-danger')
+    result.classList.add('bg-success')
+    result.classList.add('text-white')
+    result.innerText = 'YOU WIN!'
     wins += 1
     document.getElementById('wins').innerText = 'Wins: ' + wins
     return console.log("you win");
